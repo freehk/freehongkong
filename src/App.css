@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #3d3f447a;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,11 +12,11 @@
   color: white;
 }
 .App-header-message {
-  max-width: 50%;
+  max-width: 70%;
   text-align: justify;
 }
 .App-body {
-  background-color: #8091b1;
+  background-color: rgb(224, 219, 219);
   padding: 50px;
   min-height: 90vh;
   display: flex;

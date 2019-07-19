@@ -13,7 +13,8 @@ const modalStyles = {
     right: "auto",
     bottom: "auto",
     marginRight: "-50%",
-    transform: "translate(-50%, -50%)"
+    transform: "translate(-50%, -50%)",
+    maxHeight: "90%"
   }
 };
 const styles = {
@@ -21,7 +22,8 @@ const styles = {
     border: "1px solid #eeeeee",
     margin: 10,
     display: "flex",
-    maxWidth: "30rem",
+    maxHeight: "25rem",
+    maxWidth: "20rem",
     justifyContent: "center",
     cursor: "pointer",
     position: "relative"
@@ -65,6 +67,7 @@ class StoryCard extends React.Component {
           style={modalStyles}
           onRequestClose={this.handleCloseModal}
         >
+          <img style={styles.image} src={this.props.url} />
           <p>{this.props.story}</p>
         </ReactModal>
       </div>
@@ -76,7 +79,7 @@ var renderData = storyJson.map(value => (
   <StoryCard
     key={value.url}
     url={value.url}
-    story={value.story}
+    story={value.story || "to be added"}
     title={value.title || ""}
   />
 ));
