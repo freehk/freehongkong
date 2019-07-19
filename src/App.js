@@ -1,49 +1,23 @@
 import React from "react";
 import "./App.css";
-import ReactCardFlip from "react-card-flip";
 import storyJson from "./data.json";
+import ReactModal from "react-modal";
 
-class StoryCard extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      isFlipped: false
-    };
-    this.handleClick = this.handleClick.bind(this);
+ReactModal.setAppElement("#root");
+
+const modalStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    width: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)"
   }
-
-  handleClick(e) {
-    e.preventDefault();
-    this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
-  }
-
-  render() {
-    return (
-      <ReactCardFlip
-        isFlipped={this.state.isFlipped}
-        containerStyle={this.props.styles.flipcard}
-      >
-        <div
-          key="front"
-          style={this.props.styles.card}
-          onClick={this.handleClick}
-        >
-          <img style={this.props.styles.image} src={this.props.picture} />
-        </div>
-
-        <div
-          key="back"
-          style={this.props.styles.card}
-          onClick={this.handleClick}
-        >
-          <p>{this.props.story}</p>
-        </div>
-      </ReactCardFlip>
-    );
-  }
-}
+};
 const styles = {
-  flipcard: {
+  card: {
     border: "1px solid #eeeeee",
     margin: 10,
     display: "flex",
@@ -52,22 +26,55 @@ const styles = {
     cursor: "pointer",
     position: "relative"
   },
-  card: {
-    height: "100%",
-    width: "100%",
-  },
   image: {
     maxWidth: "100%",
     display: "flex"
   }
 };
 
+class StoryCard extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      showModal: false
+    };
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
+  }
+
+  handleOpenModal() {
+    this.setState({ showModal: true });
+  }
+
+  handleCloseModal() {
+    this.setState({ showModal: false });
+  }
+
+  render() {
+    return (
+      <div style={styles.card}>
+        <img
+          onClick={this.handleOpenModal}
+          style={styles.image}
+          src={this.props.picture}
+        />
+        <ReactModal
+          isOpen={this.state.showModal}
+          style={modalStyles}
+          onRequestClose={this.handleCloseModal}
+        >
+          <p>{this.props.story}</p>
+        </ReactModal>
+      </div>
+    );
+  }
+}
+
 var renderData = storyJson.map(value => (
   <StoryCard
     key={value["picture"]}
     picture={value["picture"]}
     story={value["story"]}
-    styles={styles}
   />
 ));
 
@@ -75,10 +82,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Free Hong Kong!</h1>
-        <p>
-          The freedom of Hong Kong has been under constant attack; and it has
-          only gotten worse over the past few years.
+        <p className="App-header-message">
+          Each picture tells a story about our recent struggle to remain free.
+          Click on any of them to understand more.
         </p>
       </header>
       <div className="App-body">{renderData}</div>
