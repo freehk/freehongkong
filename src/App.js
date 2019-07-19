@@ -56,7 +56,9 @@ class StoryCard extends React.Component {
         <img
           onClick={this.handleOpenModal}
           style={styles.image}
-          src={this.props.picture}
+          src={this.props.url}
+          alt={this.props.title}
+          title={this.props.title}
         />
         <ReactModal
           isOpen={this.state.showModal}
@@ -72,9 +74,10 @@ class StoryCard extends React.Component {
 
 var renderData = storyJson.map(value => (
   <StoryCard
-    key={value["picture"]}
-    picture={value["picture"]}
-    story={value["story"]}
+    key={value.url}
+    url={value.url}
+    story={value.story}
+    title={value.title || ""}
   />
 ));
 
