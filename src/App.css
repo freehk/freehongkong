@@ -15,4 +15,5 @@
 .App-body {
   background-color: #8091b1;
   padding: 50px;
+  min-height: 90vh;
 }

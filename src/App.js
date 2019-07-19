@@ -1,68 +1,86 @@
 import React from "react";
 import "./App.css";
-
-class Square extends React.Component {
-  render() {
-    var squareStyle = {
-      height: 150,
-      backgroundColor: this.props.picture
-    };
-
-    return <div style={squareStyle} />;
-  }
-}
-
-class Label extends React.Component {
-  render() {
-    var labelStyle = {
-      fontFamily: "sans-serif",
-      fontWeight: "bold",
-      padding: 13,
-      margin: 0
-    };
-
-    return <p style={labelStyle}>{this.props.story}</p>;
-  }
-}
+import ReactCardFlip from "react-card-flip";
+import storyJson from "./data.json";
 
 class StoryCard extends React.Component {
-  render() {
-    var cardStyle = {
-      height: 200,
-      width: 150,
-      padding: 50,
-      display: "inline-block",
-      WebkitFilter: "drop-shadow(0px 0px 5px #666)",
-      filter: "drop-shadow(0px 0px 5px #666)"
+  constructor() {
+    super();
+    this.state = {
+      isFlipped: false
     };
+    this.handleClick = this.handleClick.bind(this);
+  }
 
+  handleClick(e) {
+    e.preventDefault();
+    this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
+  }
+
+  render() {
     return (
-      <div style={cardStyle}>
-        <Square picture={this.props.picture} />
-        <Label story={this.props.story} />
-      </div>
+      <ReactCardFlip
+        isFlipped={this.state.isFlipped}
+        containerStyle={this.props.styles.flipcard}
+      >
+        <div
+          key="front"
+          style={this.props.styles.card}
+          onClick={this.handleClick}
+        >
+          <img style={this.props.styles.image} src={this.props.picture} />
+        </div>
+
+        <div
+          key="back"
+          style={this.props.styles.card}
+          onClick={this.handleClick}
+        >
+          <p>{this.props.story}</p>
+        </div>
+      </ReactCardFlip>
     );
   }
 }
-var colors = [
-  "#393E41",
-  "#E94F37",
-  "#1C89BF",
-  "#A1D363",
-  "#85FFC7",
-  "#297373",
-  "#FF8552",
-  "#A40E4C"
-];
-var renderData = colors.map(value => (
-  <StoryCard key={value} picture={value} story="bullshit" />
+const styles = {
+  flipcard: {
+    border: "1px solid #eeeeee",
+    height: 360,
+    width: 480,
+    margin: 10,
+    WebkitFilter: "drop-shadow(0px 0px 5px #666)",
+    filter: "drop-shadow(0px 0px 5px #666)",
+    display: "inline-block",
+    cursor: "pointer"
+  },
+  card: {
+    height: "100%",
+    width: "100%",
+    position: "absolute"
+  },
+  image: {
+    height: "100%",
+    width: "100%"
+  }
+};
+
+var renderData = storyJson.map(value => (
+  <StoryCard
+    picture={value["picture"]}
+    story={value["story"]}
+    styles={styles}
+  />
 ));
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>Free Hong Kong!</p>
+        <h1>Free Hong Kong!</h1>
+        <p>
+          The freedom of Hong Kong has been under constant attack; and it has
+          only gotten worse over the past few years.
+        </p>
       </header>
       <div className="App-body">{renderData}</div>
     </div>
