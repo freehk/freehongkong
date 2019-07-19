@@ -66,6 +66,7 @@ const styles = {
 
 var renderData = storyJson.map(value => (
   <StoryCard
+    key={value["picture"]}
     picture={value["picture"]}
     story={value["story"]}
     styles={styles}
