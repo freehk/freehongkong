@@ -45,22 +45,20 @@ class StoryCard extends React.Component {
 const styles = {
   flipcard: {
     border: "1px solid #eeeeee",
-    height: 360,
-    width: 480,
     margin: 10,
-    WebkitFilter: "drop-shadow(0px 0px 5px #666)",
-    filter: "drop-shadow(0px 0px 5px #666)",
-    display: "inline-block",
-    cursor: "pointer"
+    display: "flex",
+    maxWidth: "30rem",
+    justifyContent: "center",
+    cursor: "pointer",
+    position: "relative"
   },
   card: {
     height: "100%",
     width: "100%",
-    position: "absolute"
   },
   image: {
-    height: "100%",
-    width: "100%"
+    maxWidth: "100%",
+    display: "flex"
   }
 };
 
