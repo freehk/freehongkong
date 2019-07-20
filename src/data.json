@@ -10,7 +10,7 @@
   "contact": {
     "contactMessage": "stay in touch!"
   },
-  "gallery": {
+  "storyWall": {
     "pictures": [
       {
         "url": "//static01.nyt.com/images/2019/07/01/world/01hk-photos15/merlin_157313919_7266cb61-6908-48b1-9650-3ff09db0471e-superJumbo.jpg",
@@ -26,9 +26,6 @@
       {
         "url": "//cdn.thestandnews.com/media/photos/cache/IMG_20190718_114929668_Jz04t_1200x0.jpg",
         "alt": "lennon wall in Berlin"
-      },
-      {
-        "url": "//www.straitstimes.com/sites/default/files/articles/2019/06/13/st_20190613_nnhknew_4905910.jpg"
       }
     ]
   }

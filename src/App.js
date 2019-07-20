@@ -3,7 +3,7 @@ import "./App.css";
 import data from "./data.json";
 import Header from "./Components/Header";
 import Event from "./Components/Event";
-import Gallery from "./Components/Gallery";
+import StoryWall from "./Components/StoryWall";
 import Contact from "./Components/Contact";
 
 class App extends Component {
@@ -27,7 +27,7 @@ class App extends Component {
       <div className="App">
         <Header data={this.state.data.header} />
         <Event data={this.state.data.event} />
-        <Gallery data={this.state.data.gallery} />
+        <StoryWall data={this.state.data.storyWall} />
         <Contact data={this.state.data.contact} />
       </div>
     );
