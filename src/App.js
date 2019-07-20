@@ -1,100 +1,48 @@
-import React from "react";
+import React, { Component } from "react";
+import $ from "jquery";
 import "./App.css";
-import storyJson from "./data.json";
-import ReactModal from "react-modal";
+import Header from "./Components/Header";
+import Event from "./Components/Event";
+import Gallery from "./Components/Gallery";
+import Contact from "./Components/Contact";
 
-ReactModal.setAppElement("#root");
-
-const modalStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    width: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-    maxHeight: "90%"
-  }
-};
-const styles = {
-  card: {
-    margin: 10,
-    display: "flex",
-    alignItems: "baseline",
-    maxWidth: "20rem",
-    justifyContent: "center",
-    cursor: "pointer",
-    position: "relative"
-  },
-  image: {
-    maxWidth: "100%",
-    display: "flex"
-  }
-};
-
-class StoryCard extends React.Component {
-  constructor() {
-    super();
+class App extends Component {
+  constructor(props) {
+    super(props);
     this.state = {
-      showModal: false
+      data: {}
     };
-    this.handleOpenModal = this.handleOpenModal.bind(this);
-    this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
-  handleOpenModal() {
-    this.setState({ showModal: true });
+  getData() {
+    $.ajax({
+      url: "/data.json",
+      dataType: "json",
+      cache: false,
+      success: function(data) {
+        this.setState({ data: data });
+      }.bind(this),
+      error: function(xhr, status, err) {
+        console.log(err);
+        alert(err);
+      }
+    });
   }
 
-  handleCloseModal() {
-    this.setState({ showModal: false });
+  componentDidMount() {
+    this.getData();
   }
 
   render() {
     return (
-      <div style={styles.card}>
-        <img
-          onClick={this.handleOpenModal}
-          style={styles.image}
-          src={this.props.url}
-          alt={this.props.title}
-          title={this.props.title}
-        />
-        <ReactModal
-          isOpen={this.state.showModal}
-          style={modalStyles}
-          onRequestClose={this.handleCloseModal}
-        >
-          <img style={styles.image} src={this.props.url} />
-          <pre>{this.props.story}</pre>
-        </ReactModal>
+      <div className="App">
+        <Header data={this.state.data.header} />
+        <Event data={this.state.data.event} />
+        <Gallery data={this.state.data.gallery} />
+        <Contact data={this.state.data.contact} />
       </div>
     );
   }
-}
-
-var renderData = storyJson.map(value => (
-  <StoryCard
-    key={value.url}
-    url={value.url}
-    story={value.story || "to be added"}
-    title={value.title || ""}
-  />
-));
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p className="App-header-message">
-          Each picture tells a story about our recent struggle to remain free.
-          Click on any of them to understand more.
-        </p>
-      </header>
-      <div className="App-body">{renderData}</div>
-    </div>
-  );
 }
 
 export default App;

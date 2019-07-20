@@ -1,7 +1,13 @@
 # Project Free Hong Kong
+
 This repo creates a simple site to store some pictures as well as story behind what's been happening in HK. To to [https://freehk.github.io/freehongkong/](https://freehk.github.io/freehongkong/) to see the page.
 
+## Description
+
+This is built based on https://github.com/tbakerx/react-resume-template.
+
 ## Run Info
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### `npm start`
@@ -15,11 +21,3 @@ You will also see any lint errors in the console.
 ### `npm run deploy`
 
 Pushes the built app to github on gh-pages branch.
-
-## TODOs
-- consider using gallery/carousel
-- sort by date of event/addition
-- navbar
-    - introduction + latest news
-    - second page for images
-    - third: contact
