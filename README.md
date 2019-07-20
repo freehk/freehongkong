@@ -15,3 +15,11 @@ You will also see any lint errors in the console.
 ### `npm run deploy`
 
 Pushes the built app to github on gh-pages branch.
+
+## TODOs
+- consider using gallery/carousel
+- sort by date of event/addition
+- navbar
+    - introduction + latest news
+    - second page for images
+    - third: contact
