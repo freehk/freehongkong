@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import $ from "jquery";
 import "./App.css";
+import data from "./data.json";
 import Header from "./Components/Header";
 import Event from "./Components/Event";
 import Gallery from "./Components/Gallery";
@@ -15,18 +15,7 @@ class App extends Component {
   }
 
   getData() {
-    $.ajax({
-      url: "/data.json",
-      dataType: "json",
-      cache: false,
-      success: function(data) {
-        this.setState({ data: data });
-      }.bind(this),
-      error: function(xhr, status, err) {
-        console.log(err);
-        alert(err);
-      }
-    });
+    this.setState({ data: data });
   }
 
   componentDidMount() {
