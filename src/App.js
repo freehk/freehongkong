@@ -19,10 +19,9 @@ const modalStyles = {
 };
 const styles = {
   card: {
-    border: "1px solid #eeeeee",
     margin: 10,
     display: "flex",
-    maxHeight: "25rem",
+    alignItems: "baseline",
     maxWidth: "20rem",
     justifyContent: "center",
     cursor: "pointer",
@@ -68,7 +67,7 @@ class StoryCard extends React.Component {
           onRequestClose={this.handleCloseModal}
         >
           <img style={styles.image} src={this.props.url} />
-          <p>{this.props.story}</p>
+          <pre>{this.props.story}</pre>
         </ReactModal>
       </div>
     );
