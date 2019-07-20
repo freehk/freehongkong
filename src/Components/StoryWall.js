@@ -1,21 +1,61 @@
 import React, { Component } from "react";
+import ReactModal from "react-modal";
+
+ReactModal.setAppElement("#root");
+
+class StoryCard extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      showModal: false
+    };
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
+  }
+
+  handleOpenModal() {
+    this.setState({ showModal: true });
+  }
+
+  handleCloseModal() {
+    this.setState({ showModal: false });
+  }
+
+  render() {
+    return (
+      <div key={this.props.url} className="columns storyWall-item">
+        <div className="item-wrap">
+          <img alt={this.props.alt} src={this.props.url} />
+          <div className="overlay" onClick={this.handleOpenModal}>
+            <div className="storyWall-item-meta">
+              <h5>{this.props.alt}</h5>
+              <p>{this.props.story}</p>
+            </div>
+          </div>
+          <ReactModal
+            isOpen={this.state.showModal}
+            onRequestClose={this.handleCloseModal}
+          >
+            <img alt={this.props.alt} src={this.props.url} />
+            <pre>{this.props.story}</pre>
+          </ReactModal>
+        </div>
+      </div>
+    );
+  }
+}
 
 class StoryWall extends Component {
   render() {
     if (this.props.data) {
-      var stories = this.props.data.pictures.map(picture => {
+      var stories = this.props.data.pictures.map(value => {
         return (
-          <div key={picture.url} className="columns storyWall-item">
-            <div className="item-wrap">
-              <img alt={picture.alt} src={picture.url} />
-              <div className="overlay">
-                <div className="storyWall-item-meta">
-                  <h5>{picture.alt || "title"}</h5>
-                  <p>{picture.story || "random text"}</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <StoryCard
+            key={value.url}
+            url={value.url}
+            story={value.story || "story to be added"}
+            alt={value.alt || "title"}
+          />
         );
       });
     }
