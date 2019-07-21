@@ -5,7 +5,7 @@ import Header from "./Components/Header";
 import Event from "./Components/Event";
 import StoryWall from "./Components/StoryWall";
 import Contact from "./Components/Contact";
-import Temp from "./Components/Gallery";
+import Gallery from "./Components/Gallery";
 
 class App extends Component {
   constructor(props) {
@@ -29,7 +29,7 @@ class App extends Component {
         <Header data={this.state.data.header} />
         <Event data={this.state.data.event} />
         <StoryWall data={this.state.data.storyWall} />
-        <Temp data={this.state.data.gallery} />
+        <Gallery data={this.state.data.gallery} />
         <Contact data={this.state.data.contact} />
       </div>
     );

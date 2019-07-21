@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import Carousel, { Modal, ModalGateway } from "react-images";
-import Gallery from "react-photo-gallery";
 
-class Temp extends Component {
+class Gallery extends Component {
   constructor() {
     super();
     this.state = {
@@ -13,7 +12,7 @@ class Temp extends Component {
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
-  handleOpenModal(event, { photo, index }) {
+  handleOpenModal(event, index) {
     this.setState({ showModal: true });
     this.setState({ currentImage: index });
   }
@@ -24,18 +23,36 @@ class Temp extends Component {
   }
 
   render() {
+    const style = {
+      margin: 10,
+      display: "flex",
+      alignItems: "baseline",
+      flexWrap: "wrap",
+      justifyContent: "center",
+      cursor: "pointer",
+      position: "relative"
+    };
+    const imgStyle = {
+      maxWidth: "12rem"
+    };
+    // TODO: css should go somewhere else
+    // TODO: standard size.
     if (this.props.data) {
-      var photos = this.props.data.map(value => {
-        return { src: value.url, width: value.width || 1, height: value.width || 1 };
+      var photos = this.props.data.map((value, index) => {
+        return { src: value.url, photoIndex: index };
+      });
+      var images = photos.map(value => {
+        return (
+          <img
+            src={value.src}
+            style={imgStyle}
+            onClick={event => this.handleOpenModal(event, value.photoIndex)}
+          />
+        );
       });
       var gallery = (
         <div>
-          <Gallery
-            onClick={this.handleOpenModal}
-            // direction={"column"}
-            targetRowHeight={200}
-            photos={photos}
-          />
+          <div style={style}> {images}</div>
           <ModalGateway>
             {this.state.showModal ? (
               <Modal onClose={this.handleCloseModal}>
@@ -72,4 +89,4 @@ class Temp extends Component {
   }
 }
 
-export default Temp;
+export default Gallery;
