@@ -1,6 +1,6 @@
 # Project Free Hong Kong
 
-This repo creates a simple site to store some pictures as well as story behind what's been happening in HK. Go to https://freehongkong.netlify.com/ to see the page.
+This repo creates a site to store some distribution pictures as well as story behind what's been happening in HK. Go to https://freehongkong.netlify.com/ to see the page.
 
 ## Description
 
