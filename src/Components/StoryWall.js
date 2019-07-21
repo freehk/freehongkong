@@ -22,6 +22,18 @@ class StoryCard extends React.Component {
   }
 
   render() {
+    const modalStyle = {
+      content: {
+        width: "70%",
+        top: "50%",
+        left: "50%",
+        right: "auto",
+        bottom: "auto",
+        marginRight: "-50%",
+        transform: "translate(-50%, -50%)",
+        maxHeight: "90%"
+      }
+    };
     return (
       <div key={this.props.url} className="columns storyWall-item">
         <div className="item-wrap">
@@ -33,10 +45,12 @@ class StoryCard extends React.Component {
             </div>
           </div>
           <ReactModal
+            style={modalStyle}
             isOpen={this.state.showModal}
             onRequestClose={this.handleCloseModal}
           >
             <img alt={this.props.alt} src={this.props.url} />
+            <h5>{this.props.alt}</h5>
             <pre>{this.props.story}</pre>
           </ReactModal>
         </div>
