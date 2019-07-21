@@ -33,10 +33,11 @@ class Gallery extends Component {
       position: "relative"
     };
     const imgStyle = {
-      maxWidth: "12rem"
+      width: "12rem",
+      height: "12rem",
+      margin: "0.1rem"
     };
     // TODO: css should go somewhere else
-    // TODO: standard size.
     if (this.props.data) {
       var photos = this.props.data.map((value, index) => {
         return { src: value.url, photoIndex: index };
