@@ -85,14 +85,14 @@
     width: auto;
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
   }
   #nav-wrap > a {
     width: 48px;
     height: 48px;
     text-align: left;
     background-color: #cc5200;
-    position: relative;
+    position: absolute;
     border: none;
     float: right;
 
@@ -100,9 +100,9 @@
     text-shadow: none;
     color: transparent;
 
-    position: relative;
     top: 0px;
-    right: 30px;
+    left: 30px;
+    z-index: 1000;
   }
 
   #nav-wrap > a:before,
