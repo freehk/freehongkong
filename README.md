@@ -1,6 +1,6 @@
 # Project Free Hong Kong
 
-This repo creates a simple site to store some pictures as well as story behind what's been happening in HK. To to [https://freehk.github.io/freehongkong/](https://freehk.github.io/freehongkong/) to see the page.
+This repo creates a simple site to store some pictures as well as story behind what's been happening in HK. Go to https://freehongkong.netlify.com/ to see the page.
 
 ## Description
 
@@ -18,6 +18,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-### `npm run deploy`
+## Deployment Info
 
-Pushes the built app to github on gh-pages branch.
+There is netlify github integration. simply push to the `master` branch.
