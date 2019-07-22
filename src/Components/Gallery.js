@@ -45,7 +45,9 @@ class Gallery extends Component {
       var images = photos.map(value => {
         return (
           <img
+            key={value.src}
             src={value.src}
+            alt={value.alt || ""}
             style={imgStyle}
             onClick={event => this.handleOpenModal(event, value.photoIndex)}
           />
