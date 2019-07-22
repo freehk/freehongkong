@@ -12,6 +12,7 @@
     "react-scripts": "^3.0.1"
   },
   "scripts": {
+    "bootstrap": "node ./scripts/bootstrap-fauna-database.js",
     "checkForFaunaKey": "node ./scripts/check-for-fauna-key.js",
     "start": "npm-run-all --parallel checkForFaunaKey start:app start:server",
     "start:app": "react-scripts start",
