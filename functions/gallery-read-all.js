@@ -11,7 +11,7 @@ exports.handler = (event, context, callback) => {
     .query(q.Paginate(q.Match(q.Ref("indexes/all_freehongkong-gallery"))))
     .then(response => {
       const imageRefs = response.data;
-      console.log("Image refs", imageRefs);
+      // console.log("Image refs", imageRefs);
       console.log(`${imageRefs.length} images found`);
       // create new query out of image refs. http://bit.ly/2LG3MLg
       const getAllImageDataQuery = imageRefs.map(ref => {
