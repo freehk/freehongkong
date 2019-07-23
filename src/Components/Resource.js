@@ -3,7 +3,7 @@ import Carousel, { Modal, ModalGateway } from "react-images";
 import api from "../utils/api";
 import isLocalHost from "../utils/isLocalHost";
 
-class Gallery extends Component {
+class Resource extends Component {
   constructor() {
     super();
     this.state = {
@@ -15,7 +15,7 @@ class Gallery extends Component {
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
   componentDidMount() {
-    api.readCategory("photo").then(images => {
+    api.readCategory("design material").then(images => {
       if (images.message === "unauthorized") {
         if (isLocalHost()) {
           alert(
@@ -79,7 +79,7 @@ class Gallery extends Component {
           />
         );
       });
-      var gallery = (
+      var resource = (
         <div>
           <div style={style}> {images}</div>
           <ModalGateway>
@@ -101,11 +101,17 @@ class Gallery extends Component {
     }
 
     return (
-      <section id="gallery">
+      <section id="resource">
         <div className="row">
-          <div className="twelve columns main-col">
-            <pre>Have a taste of what we are going through every day. This is the state we are in until we find freedom</pre>
-            {gallery}
+          <div className="eight columns">
+            {resource}
+          </div>
+          <div className="four columns">
+            <pre>
+              We hope that you will find this collection of material useful for
+              sharing the news with the world. Note that we do not own the
+              rights to them.
+            </pre>
           </div>
         </div>
       </section>
@@ -113,4 +119,4 @@ class Gallery extends Component {
   }
 }
 
-export default Gallery;
+export default Resource;

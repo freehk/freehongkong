@@ -353,6 +353,25 @@ ul#nav li.current a {
   font-size: 17px;
 }
 
+
+/* ------------------------------------------------------------------ */
+/* e. Resource Section
+/* ------------------------------------------------------------------ */
+#resource {
+  /* background: #ebeeee; */
+  padding-top: 66px;
+  padding-bottom: 48px;
+}
+/* #gallery h2 {
+  font: 28px/36px "opensans-bold", sans-serif;
+  color: #95a3a3;
+  margin-bottom: 6px;
+}
+#gallery pre {
+  color: #636363;
+  font-size: 17px;
+} */
+
 /* ------------------------------------------------------------------ */
 /* f. Contact Section
 /* ------------------------------------------------------------------ */

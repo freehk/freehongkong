@@ -4,6 +4,13 @@ const readAll = () => {
   });
 };
 
+const readCategory = (category) => {
+  return fetch(`/.netlify/functions/gallery-read-category/?category=${category}`).then(response => {
+    return response.json();
+  });
+};
+
 export default {
-  readAll: readAll
+  readAll: readAll,
+  readCategory: readCategory
 };

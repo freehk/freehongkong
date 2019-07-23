@@ -214,10 +214,22 @@
 
   /* Gallery Section
    /* ----------------------------------------------------------------- */
-   #gallery .main-col {
+  #gallery .main-col {
     padding-right: 30px;
   }
   #gallery-wrapper .columns {
+    margin-bottom: 40px;
+  }
+  .popup-modal {
+    max-width: 85%;
+  }
+
+  /* Resource Section
+   /* ----------------------------------------------------------------- */
+  #resource .main-col {
+    padding-right: 30px;
+  }
+  #resource-wrapper .columns {
     margin-bottom: 40px;
   }
   .popup-modal {

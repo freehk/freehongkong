@@ -14,7 +14,8 @@ class Contact extends Component {
           <div className="ten columns">
             <h4>Thank you for caring about Hong Kong!</h4>
             <p>
-              If you would like to send us any pictures, stories, or anything at all, please contact us at novookoss at gmail.
+              If you would like to send us any pictures, stories, or anything at
+              all, please contact us at novookoss at gmail.
             </p>
           </div>
         </div>
