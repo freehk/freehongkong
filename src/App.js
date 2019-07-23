@@ -29,7 +29,7 @@ class App extends Component {
         <Header data={this.state.data.header} />
         <Event data={this.state.data.event} />
         <StoryWall data={this.state.data.storyWall} />
-        <Gallery data={this.state.data.gallery} />
+        <Gallery />
         <Contact data={this.state.data.contact} />
       </div>
     );
