@@ -5,6 +5,7 @@ class Event extends Component {
   render() {
     if (this.props.data) {
       var profilepic = "images/" + this.props.data.image;
+      var screenName = this.props.data.screenName;
     }
 
     return (
@@ -16,7 +17,7 @@ class Event extends Component {
           <div className="nine columns main-col">
             <TwitterTimelineEmbed
               sourceType="profile"
-              screenName="StandNewsHK"
+              screenName={screenName}
               theme="dark"
               noHeader={true}
               noFooter={true}

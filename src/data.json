@@ -5,7 +5,8 @@
     "secondaryMessage": "We are desperately fighting against oppression. And we want the world to be aware of our struggle. Join us in the fight for freedom."
   },
   "event": {
-    "image": "profilepic.jpg"
+    "image": "profilepic.jpg",
+    "screenName": "StandNewsHK"
   },
   "contact": {
     "contactMessage": "stay in touch!"
