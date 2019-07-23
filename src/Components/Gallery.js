@@ -104,6 +104,7 @@ class Gallery extends Component {
       <section id="gallery">
         <div className="row">
           <div className="twelve columns main-col">
+            <h1>Gallery</h1>
             <pre>Have a taste of what we are going through every day. This is the state we are in until we find freedom</pre>
             {gallery}
           </div>

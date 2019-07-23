@@ -103,6 +103,9 @@ class Resource extends Component {
     return (
       <section id="resource">
         <div className="row">
+          <div className="twelve columns">
+            <h1>Resource</h1>
+          </div>
           <div className="eight columns">
             {resource}
           </div>

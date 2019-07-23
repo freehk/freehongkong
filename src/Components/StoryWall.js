@@ -77,7 +77,7 @@ class StoryWall extends Component {
     return (
       <section id="storyWall">
         <div className="row">
-          <div className="ten columns main-col">
+          <div className="twelve columns main-col">
             <h1>Each picture has a story. Click on them to find out.</h1>
             <div
               id="storyWall-wrapper"
