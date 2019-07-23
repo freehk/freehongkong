@@ -4,7 +4,7 @@ This repo creates a site to store some distribution pictures as well as story be
 
 ## Description
 
-This is built based on https://github.com/tbakerx/react-resume-template.
+This is built based on https://github.com/tbakerx/react-resume-template. database example from https://github.com/netlify/netlify-faunadb-example
 
 ## Run Info
 

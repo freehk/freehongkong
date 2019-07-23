@@ -1,17 +1,39 @@
 import React, { Component } from "react";
 import Carousel, { Modal, ModalGateway } from "react-images";
+import api from "../utils/api";
+import isLocalHost from "../utils/isLocalHost";
 
 class Gallery extends Component {
   constructor() {
     super();
     this.state = {
       showModal: false,
-      currentImage: 0
+      currentImage: 0,
+      images: []
     };
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
+  componentDidMount() {
+    api.readAll().then(images => {
+      if (images.message === "unauthorized") {
+        if (isLocalHost()) {
+          alert(
+            "FaunaDB key is not unauthorized. Make sure you set it in terminal session where you ran `npm start`. Visit http://bit.ly/set-fauna-key for more info"
+          );
+        } else {
+          alert(
+            "FaunaDB key is not unauthorized. Verify the key `FAUNADB_SERVER_SECRET` set in Netlify enviroment variables is correct"
+          );
+        }
+        return false;
+      }
 
+      this.setState({
+        images: images
+      });
+    });
+  }
   handleOpenModal(event, index) {
     this.setState({ showModal: true });
     this.setState({ currentImage: index });
@@ -38,15 +60,19 @@ class Gallery extends Component {
       margin: "0.1rem"
     };
     // TODO: css should go somewhere else
-    if (this.props.data) {
-      var photos = this.props.data.map((value, index) => {
-        return { src: value.url, photoIndex: index };
+    if (this.state.images) {
+      var photos = this.state.images.map((value, index) => {
+        return {
+          thumbnail_url: value.data.thumbnail_url,
+          src: value.data.url,
+          photoIndex: index
+        };
       });
       var images = photos.map(value => {
         return (
           <img
-            key={value.src}
-            src={value.src}
+            key={value.thumbnail_url}
+            src={value.thumbnail_url}
             alt={value.alt || ""}
             style={imgStyle}
             onClick={event => this.handleOpenModal(event, value.photoIndex)}
