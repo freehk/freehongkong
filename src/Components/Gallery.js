@@ -15,7 +15,7 @@ class Gallery extends Component {
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
   componentDidMount() {
-    api.readCategory("photo").then(images => {
+    api.readNotCategory("design material").then(images => {
       if (images.message === "unauthorized") {
         if (isLocalHost()) {
           alert(
@@ -105,7 +105,10 @@ class Gallery extends Component {
         <div className="row">
           <div className="twelve columns main-col">
             <h1>Gallery</h1>
-            <pre>Have a taste of what we are going through every day. This is the state we are in until we find freedom</pre>
+            <pre>
+              Have a taste of what we are going through every day. This is the
+              state we are in until we find freedom
+            </pre>
             {gallery}
           </div>
         </div>

@@ -6,14 +6,18 @@ const client = new faunadb.Client({
 });
 
 exports.handler = (event, context, callback) => {
-  console.log("Function `gallery-read-category` invoked");
+  console.log("Function `gallery-read-not-category` invoked");
   console.log(event.queryStringParameters.category);
   return client
     .query(
       q.Paginate(
-        q.Match(
-          q.Ref("indexes/tags_freehongkong-gallery"),
-          event.queryStringParameters.category
+        q.Difference(
+          q.Match(
+            q.Ref("indexes/all_freehongkong-gallery")),
+          q.Match(
+            q.Ref("indexes/tags_freehongkong-gallery"),
+            event.queryStringParameters.category
+          )
         )
       )
     )

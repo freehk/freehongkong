@@ -4,13 +4,24 @@ const readAll = () => {
   });
 };
 
-const readCategory = (category) => {
-  return fetch(`/.netlify/functions/gallery-read-category/?category=${category}`).then(response => {
+const readCategory = category => {
+  return fetch(
+    `/.netlify/functions/gallery-read-category/?category=${category}`
+  ).then(response => {
+    return response.json();
+  });
+};
+
+const readNotCategory = category => {
+  return fetch(
+    `/.netlify/functions/gallery-read-not-category/?category=${category}`
+  ).then(response => {
     return response.json();
   });
 };
 
 export default {
   readAll: readAll,
-  readCategory: readCategory
+  readCategory: readCategory,
+  readNotCategory: readNotCategory
 };
