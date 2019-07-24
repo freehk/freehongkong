@@ -31,7 +31,7 @@ class App extends Component {
         <Event data={this.state.data.event} />
         <StoryWall data={this.state.data.storyWall} />
         <Gallery />
-        <Resource />
+        {/* <Resource /> */}
         <Contact data={this.state.data.contact} />
       </div>
     );

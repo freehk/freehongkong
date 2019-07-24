@@ -7,3 +7,4 @@
 
 [template.environment]
   FAUNADB_SERVER_SECRET = "Your FaunaDB Server Secret"
+  IMGUR_CLIENT_ID = "IMG"
