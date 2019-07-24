@@ -57,7 +57,8 @@ class Gallery extends Component {
     const imgStyle = {
       width: "12rem",
       height: "12rem",
-      margin: "0.1rem"
+      margin: "0.1rem",
+      objectFit: "cover"
     };
     // TODO: css should go somewhere else
     if (this.state.images) {

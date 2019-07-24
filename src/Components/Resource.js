@@ -57,7 +57,8 @@ class Resource extends Component {
     const imgStyle = {
       width: "12rem",
       height: "12rem",
-      margin: "0.1rem"
+      margin: "0.1rem",
+      objectFit: "cover"
     };
     // TODO: css should go somewhere else
     if (this.state.images) {
@@ -106,9 +107,7 @@ class Resource extends Component {
           <div className="twelve columns">
             <h1>Resource</h1>
           </div>
-          <div className="eight columns">
-            {resource}
-          </div>
+          <div className="eight columns">{resource}</div>
           <div className="four columns">
             <pre>
               We hope that you will find this collection of material useful for
