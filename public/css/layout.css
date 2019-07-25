@@ -141,8 +141,9 @@ header .scrolldown a:hover {
   font: 18px/1.9em "opensans", sans-serif;
   color: black;
   margin: 0 auto;
-  width: 80%;
-  /* text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5); */
+  max-width: 20cm;
+  text-align: justify;
+  /* line-height: 100%; */
 }
 
 /* primary navigation
