@@ -34,10 +34,16 @@ class StoryCard extends React.Component {
         maxHeight: "90%"
       }
     };
+    const imgStyle = {
+      width: "12rem",
+      height: "12rem",
+      // margin: "0.1rem",
+      objectFit: "cover"
+    };
     return (
       <div key={this.props.url} className="columns storyWall-item">
-        <div className="item-wrap">
-          <img alt={this.props.alt} src={this.props.url} />
+        <div className="item-wrap" style={imgStyle}>
+          <img alt={this.props.alt} src={this.props.url} style={imgStyle} />
           <div className="overlay" onClick={this.handleOpenModal}>
             <div className="storyWall-item-meta">
               <h5>{this.props.alt}</h5>
@@ -74,15 +80,20 @@ class StoryWall extends Component {
       });
     }
 
+    const wallStyle = {
+      display: "flex",
+      alignItems: "baseline",
+      flexWrap: "wrap",
+      justifyContent: "center",
+      cursor: "pointer",
+      position: "relative"
+    };
     return (
       <section id="storyWall">
         <div className="row">
           <div className="twelve columns main-col">
             <h1>Each picture has a story. Click on them to find out.</h1>
-            <div
-              id="storyWall-wrapper"
-              className="bgrid-quarters s-bgrid-thirds cf"
-            >
+            <div id="storyWall-wrapper" style={wallStyle}>
               {stories}
             </div>
           </div>

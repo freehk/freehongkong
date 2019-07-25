@@ -23,6 +23,7 @@ class Event extends Component {
               noFooter={true}
               transparent={true}
               options={{ height: 400 }}
+              noBorders
             />
           </div>
         </div>

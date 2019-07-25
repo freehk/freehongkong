@@ -4,7 +4,6 @@ class Header extends Component {
   render() {
     if (this.props.data) {
       var mainMessage = this.props.data.mainMessage;
-      var mainMessageChinese = this.props.data.mainMessageChinese;
       var secondaryMessage = this.props.data.secondaryMessage;
     }
 
@@ -25,8 +24,8 @@ class Header extends Component {
               </a>
             </li>
             <li>
-              <a className="smoothscroll" href="#event">
-                Event
+              <a className="smoothscroll" href="#intro">
+                Intro
               </a>
             </li>
             <li>
@@ -40,8 +39,8 @@ class Header extends Component {
               </a>
             </li>
             <li>
-              <a className="smoothscroll" href="#resource">
-                Resource
+              <a className="smoothscroll" href="#event">
+                Event
               </a>
             </li>
             <li>
@@ -55,9 +54,7 @@ class Header extends Component {
         <div className="row banner">
           <div className="banner-text">
             <h1 className="responsive-headline">{mainMessage}</h1>
-            <h1 className="responsive-headline">{mainMessageChinese}</h1>
             <span>{secondaryMessage}</span>
-            <hr />
           </div>
         </div>
 

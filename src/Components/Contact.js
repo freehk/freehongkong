@@ -12,18 +12,9 @@ class Contact extends Component {
           </div>
 
           <div className="ten columns">
-            <h4>Thank you for caring about Hong Kong!</h4>
             <p>
-              If you would like to send us any pictures, stories, or anything at
-              all, please contact us at novookoss at gmail. Or post directly at{" "}
-              <a
-                href="https://imgur.com/t/freehongkong"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                imgur
-              </a>
-              &nbsp;with the tag <strong>freehongkong</strong>
+              Contact us at <a href="mailto:novookoss@gmail.com">novookoss@gmail.com</a>. Or post directly with the tag{" "}
+              <strong>#freehongkong</strong> on social media
             </p>
           </div>
         </div>

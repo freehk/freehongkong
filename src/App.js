@@ -3,10 +3,10 @@ import "./App.css";
 import data from "./data.json";
 import Header from "./Components/Header";
 import Event from "./Components/Event";
+import Intro from "./Components/Intro";
 import StoryWall from "./Components/StoryWall";
 import Contact from "./Components/Contact";
 import Gallery from "./Components/Gallery";
-import Resource from "./Components/Resource";
 
 class App extends Component {
   constructor(props) {
@@ -28,10 +28,11 @@ class App extends Component {
     return (
       <div className="App">
         <Header data={this.state.data.header} />
-        <Event data={this.state.data.event} />
+        <Intro data={this.state.data.intro} />
         <StoryWall data={this.state.data.storyWall} />
         <Gallery />
-        <Resource />
+        {/* <Resource /> */}
+        <Event data={this.state.data.event} />
         <Contact data={this.state.data.contact} />
       </div>
     );

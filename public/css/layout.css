@@ -32,7 +32,7 @@ header {
   height: 800px;
   min-height: 500px;
   width: 100%;
-  background: #161415 url(../images/header-background.jpg) no-repeat top center;
+  background: #0f0f0f;
   background-size: cover !important;
   -webkit-background-size: cover !important;
   text-align: center;
@@ -66,8 +66,7 @@ header .banner-text h1 {
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
 }
 header .banner-text span {
-  font: 18px/1.9em "librebaskerville-regular", serif;
-  background-color: #0f0f0f;
+  font: 18px/1.9em "opensans-bold", sans-serif;
   color: white;
   margin: 0 auto;
   width: 70%;
@@ -125,6 +124,25 @@ header .scrolldown a {
 }
 header .scrolldown a:hover {
   color: #11abb0;
+}
+
+/* ------------------------------------------------------------------ */
+/* c. Intro Section
+/* ------------------------------------------------------------------ */
+
+#intro {
+  background: white;
+  padding-top: 96px;
+  padding-bottom: 66px;
+  overflow: hidden;
+}
+
+#intro pre {
+  font: 18px/1.9em "opensans", sans-serif;
+  color: black;
+  margin: 0 auto;
+  width: 80%;
+  /* text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5); */
 }
 
 /* primary navigation
@@ -203,7 +221,7 @@ ul#nav li.current a {
 /* ------------------------------------------------------------------ */
 
 #event {
-  background: #2b2b2b;
+  background: black;
   padding-top: 96px;
   padding-bottom: 66px;
   overflow: hidden;
@@ -225,7 +243,7 @@ ul#nav li.current a {
 }
 #event p {
   line-height: 30px;
-  color: #7a7a7a;
+  color: white;
 }
 #event .profile-pic {
   position: relative;
@@ -261,7 +279,7 @@ ul#nav li.current a {
 /* ------------------------------------------------------------------ */
 
 #storyWall {
-  background: #fff;
+  background: black;
   padding-top: 90px;
   padding-bottom: 60px;
 }
@@ -269,12 +287,12 @@ ul#nav li.current a {
   padding-right: 5%;
 }
 #storyWall h1 {
-  font: 15px/24px "opensans-semibold", sans-serif;
+  font: 15px/24px "opensans", sans-serif;
   /* text-transform: uppercase; */
   letter-spacing: 1px;
   text-align: center;
   margin-bottom: 48px;
-  color: #6e7881;
+  color: white;
 }
 
 #storyWall-wrapper .columns {
@@ -325,10 +343,15 @@ ul#nav li.current a {
   color: #fff;
 }
 .storyWall-item .storyWall-item-meta p {
-  font: 12px/18px "opensans-light", sans-serif;
+  font: 12px/18px "opensans", sans-serif;
   color: #c6c7c7;
   margin-bottom: 0;
 }
+
+.storyWall-item pre {
+  font: 12px/18px "opensans", sans-serif;
+}
+
 /* on hover */
 .storyWall-item:hover .overlay {
   opacity: 1;
@@ -340,23 +363,23 @@ ul#nav li.current a {
 /* e. Gallery Section
 /* ------------------------------------------------------------------ */
 #gallery {
-  background: #ebeeee;
+  background: white;
   padding-top: 66px;
   padding-bottom: 48px;
 }
 
 #gallery h1 {
-  font: 28px/36px "opensans-semibold", sans-serif;
+  font: 28px/36px "opensans", sans-serif;
   /* text-transform: uppercase; */
   letter-spacing: 1px;
   text-align: center;
   margin-bottom: 48px;
-  color: #95a3a3;
+  color: black;
 }
 
 #gallery pre {
-  font: 15px/24px "opensans-semibold", sans-serif;
-  color: #636363;
+  font: 15px/24px "opensans", sans-serif;
+  color: black;
   text-align: center;
 }
 
