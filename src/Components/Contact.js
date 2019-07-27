@@ -13,7 +13,7 @@ class Contact extends Component {
 
           <div className="ten columns">
             <p>
-              Contact us at <a href="mailto:novookoss@gmail.com">novookoss@gmail.com</a>. Or post directly with the tag{" "}
+              Contact us at <a href="mailto:contact.freehongkong@gmail.com">contact.freehongkong@gmail.com</a>. Or post directly with the tag{" "}
               <strong>#freehongkong</strong> on social media
             </p>
           </div>
