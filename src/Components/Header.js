@@ -39,6 +39,11 @@ class Header extends Component {
               </a>
             </li>
             <li>
+              <a className="smoothscroll" href="#action">
+                Action
+              </a>
+            </li>
+            <li>
               <a className="smoothscroll" href="#event">
                 Event
               </a>

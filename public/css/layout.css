@@ -222,7 +222,7 @@ ul#nav li.current a {
 /* ------------------------------------------------------------------ */
 
 #event {
-  background: black;
+  background: white;
   padding-top: 96px;
   padding-bottom: 66px;
   overflow: hidden;
@@ -230,7 +230,7 @@ ul#nav li.current a {
 
 #event a,
 #event a:visited {
-  color: #fff;
+  color: black;
 }
 #event a:hover,
 #event a:focus {
@@ -239,12 +239,12 @@ ul#nav li.current a {
 
 #event h2 {
   font: 22px/30px "opensans-bold", sans-serif;
-  color: #fff;
+  color: black;
   margin-bottom: 12px;
 }
 #event p {
   line-height: 30px;
-  color: white;
+  color: black;
 }
 #event .profile-pic {
   position: relative;
@@ -382,6 +382,31 @@ ul#nav li.current a {
   font: 15px/24px "opensans", sans-serif;
   color: black;
   text-align: center;
+}
+
+/* ------------------------------------------------------------------ */
+/* e. Call to Action Section
+/* ------------------------------------------------------------------ */
+
+#action {
+  background: black;
+  padding-top: 90px;
+  padding-bottom: 60px;
+}
+#action .main-col {
+  padding-right: 5%;
+}
+#action h1 {
+  font: 28px/36px "opensans", sans-serif;
+  /* text-transform: uppercase; */
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 48px;
+  color: white;
+}
+
+#action tr {
+  color: white;
 }
 
 /* ------------------------------------------------------------------ */

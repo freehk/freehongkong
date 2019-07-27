@@ -7,6 +7,7 @@ import Intro from "./Components/Intro";
 import StoryWall from "./Components/StoryWall";
 import Contact from "./Components/Contact";
 import Gallery from "./Components/Gallery";
+import Action from "./Components/Action";
 
 class App extends Component {
   constructor(props) {
@@ -32,6 +33,7 @@ class App extends Component {
         <StoryWall data={this.state.data.storyWall} />
         <Gallery />
         {/* <Resource /> */}
+        <Action data={this.state.data.action} />
         <Event data={this.state.data.event} />
         <Contact data={this.state.data.contact} />
       </div>

@@ -18,7 +18,7 @@ class Event extends Component {
             <TwitterTimelineEmbed
               sourceType="profile"
               screenName={screenName}
-              theme="dark"
+              theme="light"
               noHeader={true}
               noFooter={true}
               transparent={true}

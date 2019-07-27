@@ -41,5 +41,70 @@
         "story": "This is the Chinese Social Credit system to be implemented in 2020. By then, everything we do will change our “Social Score”. Imagine when you are living under such a system. If you help elderlies in need, your score will move up. On the other hand, if you mistreat old people your score will drop. As expected, if you “disturbed or assault properties of the party” your Social Score dwindles. Will our Social Score plummet if we continue to defend our dwindling freedom as we are now doing? What happens if our scores are too low? No one knows."
       }
     ]
-  }
+  },
+  "action": [
+    {
+      "link": "https://www.facebook.com/events/882169922145096/permalink/885513735144048/",
+      "category": "protest",
+      "location": "London",
+      "title": "Be Water: London Stands With Hong Kong",
+      "date": "28-07-2019"
+    },
+    {
+      "link": "https://www.facebook.com/events/364237997837244/",
+      "category": "discussion",
+      "location": "United Commonwealth",
+      "title": "Hong Kong Policy Round Table",
+      "date": "04-08-2019"
+    },
+    {
+      "link": "https://petition.parliament.uk/petitions/233895?fbclid=IwAR1hEEzYALKXV47UV_0Z_wMYn2VscxGI5ILydLJFf2TlPrem2YLv_z6qEAU",
+      "category": "petition",
+      "location": "UK",
+      "title": "Take diplomatic action against China for not respecting Hong Kong agreement",
+      "date": "04-08-2019"
+    },
+    {
+      "link": "https://petitions.whitehouse.gov/petition/requesting-international-humanitarian-aidassistance-unprotected-hong-kong-citizens",
+      "category": "petition",
+      "location": "US",
+      "title": "Requesting international humanitarian aid/assistance for unprotected Hong Kong citizens",
+      "date": "20-08-2019"
+    },
+    {
+      "link": "https://petitions.whitehouse.gov/petition/sanction-hong-kong-government-its-state-terrorism-activity-conducted-yuen-long-train-station-hong-kong-721",
+      "category": "petition",
+      "location": "US",
+      "title": "Sanction Hong Kong government for its State Terrorism activity conducted in Yuen Long train station, Hong Kong on 7/21",
+      "date": "21-08-2019"
+    },
+    {
+      "link": "https://petition.parliament.uk/petitions/264610",
+      "category": "petition",
+      "location": "UK",
+      "title": "Hong Kong Extradition law: Pressure China with economic sanctions ",
+      "date": "10-01-2020"
+    },
+    {
+      "link": "https://petition.standwithhk.org/",
+      "category": "petition",
+      "location": "UK",
+      "title": "Uphold the 1984 Sino-British Joint Declaration",
+      "date": ""
+    },
+    {
+      "link": "https://www.change.org/p/support-hong-kong-human-rights-and-democracy-act-against-the-extradition-bill-%E6%94%AF%E6%8C%81-%E9%A6%99%E6%B8%AF%E4%BA%BA%E6%AC%8A%E8%88%87%E6%B0%91%E4%B8%BB%E6%B3%95%E6%A1%88-%E5%8F%8D%E5%B0%8D-%E9%80%83%E7%8A%AF%E6%A2%9D%E4%BE%8B-%E4%BF%AE%E8%A8%82",
+      "category": "petition",
+      "location": "Global",
+      "title": "Support HK Human Rights and Democracy Act against The Extradition Bill",
+      "date": ""
+    },
+    {
+      "link": "https://www.change.org/p/united-nations-publicly-condemns-the-hong-kong-police-for-excessive-use-of-violent-force-against-citizens",
+      "category": "petition",
+      "location": "Global",
+      "title": "Condemn Hong Kong Police for Excessive Force against Citizens & Form Independent Committee",
+      "date": ""
+    }
+  ]
 }

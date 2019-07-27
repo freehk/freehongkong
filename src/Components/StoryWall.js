@@ -37,6 +37,7 @@ class StoryCard extends React.Component {
     const imgStyle = {
       width: "12rem",
       height: "12rem",
+      cursor: "pointer",
       // margin: "0.1rem",
       objectFit: "cover"
     };
@@ -85,7 +86,6 @@ class StoryWall extends Component {
       alignItems: "baseline",
       flexWrap: "wrap",
       justifyContent: "center",
-      cursor: "pointer",
       position: "relative"
     };
     return (
