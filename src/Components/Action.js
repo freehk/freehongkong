@@ -1,23 +1,41 @@
 import React, { Component } from "react";
 
-var alignCenter = {
-  textAlign: "center",
+var trStyle = {
+  textAlign: "left",
+  paddingLeft: "1rem",
+  paddingRight: "1rem"
+};
+var tdStyle = {
+  paddingLeft: "1rem",
+  paddingRight: "1rem"
+};
+var tableStyle = {
+  borderCollapse: "collapse"
 };
 
 class Action extends Component {
   render() {
     if (this.props.data) {
       var headers = [
-        <th key="date"> Date</th>,
-        <th key="location"> Location</th>,
-        <th key="event"> Event</th>
+        <th style={trStyle} key="date">
+          {" "}
+          Date
+        </th>,
+        <th style={trStyle} key="location">
+          {" "}
+          Location
+        </th>,
+        <th style={trStyle} key="event">
+          {" "}
+          Event
+        </th>
       ];
       var actions = this.props.data.map(value => {
         return (
-          <tr key={value.title} style={alignCenter}>
-            <td>{value.date}</td>
-            <td>{value.location} </td>
-            <td>
+          <tr key={value.title} style={trStyle}>
+            <td style={tdStyle}>{value.date}</td>
+            <td style={tdStyle}>{value.location} </td>
+            <td style={tdStyle}>
               <a href={value.link} target="_blank">
                 <span>{value.title}</span>
               </a>
@@ -32,7 +50,7 @@ class Action extends Component {
         <div className="row">
           <div className="twelve columns main-col">
             <h1>What can you do to help us?</h1>
-            <table>
+            <table style={tableStyle}>
               <tbody>
                 <tr>{headers} </tr>
                 {actions}
