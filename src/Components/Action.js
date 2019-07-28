@@ -32,7 +32,7 @@ class Action extends Component {
         .filter(d => {
           return (
             new Date(d["date"]).getTime() >=
-              new Date().getTime() - 24 * 60 * 60 * 1000 || d["date"] == ""
+              new Date().getTime() - 24 * 60 * 60 * 1000 || d["date"] === ""
           );
         })
         .sort(sortByDate("date", "asc"))
@@ -42,7 +42,7 @@ class Action extends Component {
               <td style={tdStyle}>{value.date}</td>
               <td style={tdStyle}>{value.location} </td>
               <td style={tdStyle}>
-                <a href={value.link} target="_blank">
+                <a href={value.link} target="_blank" rel="noopener noreferrer">
                   <span>{value.title}</span>
                 </a>
               </td>
