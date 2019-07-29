@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactGA from "react-ga";
 import "./App.css";
 import data from "./data.json";
 import Header from "./Components/Header";
@@ -15,6 +16,8 @@ class App extends Component {
     this.state = {
       data: {}
     };
+    ReactGA.initialize("UA-144754484-1");
+    ReactGA.pageview(window.location.pathname);
   }
 
   getData() {
